@@ -1,3 +1,5 @@
+const { log } = require('console');
+
 var input = require('fs').readFileSync('input', 'utf8');
 
 var linhas = input.split('\n');
@@ -39,5 +41,12 @@ for(let i =0 ;i<altura;i++){
     }
 }
 
+for(let i =0 ;i<altura;i++){
+    console.log(`${tabuleiro[i].join('')}`);
+    for(let j =0;j<largura;j++){
+        
+    }
+    
+}
 
-console.log(tabuleiro);
+
