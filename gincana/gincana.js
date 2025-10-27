@@ -6,19 +6,19 @@ const LINHAS = INPUT.split('\n');
 
 const PRIMEIRA_LINHA = LINHAS[0].split(' ');
 
-const SEGUNDA_LINHA = LINHAS.slice(1).join('').split(' ');
+const SEGUNDA_LINHA = LINHAS[1].split(' ');
 
-let [pontosTampinhas,pontosKits] = PRIMEIRA_LINHA;
+const [PONTOS_TAMPINHAS,PONTOS_KITS] = PRIMEIRA_LINHA;
 
-let tampinhas = SEGUNDA_LINHA;
+const TAMPINHAS = SEGUNDA_LINHA;
 
 //soma todas tampinhas
-let totalTampinhas = tampinhas.reduce((a,b)=>{
+const SOMA_TAMPINHAS = TAMPINHAS.reduce((a,b)=>{
     return +a + +b;
 });
 
 //verifica qual cor de tampinha é a menor, essa sendo a quantidade de kits completados  
-let totalKits = tampinhas.reduce((a,b)=>{
+const TOTAL_KITS = TAMPINHAS.reduce((a,b)=>{
     if(a < b){
         return a;
     }else if(b < a){
@@ -27,7 +27,7 @@ let totalKits = tampinhas.reduce((a,b)=>{
 });
 
 //calcula os pontos
-let resultado = (+totalTampinhas * +pontosTampinhas) + (+pontosKits * +totalKits);
+const RESULTADO = (+SOMA_TAMPINHAS * +PONTOS_TAMPINHAS) + (+PONTOS_KITS * +TOTAL_KITS);
 
 //imprime o total de pontos
-console.log(resultado);
+console.log(RESULTADO);

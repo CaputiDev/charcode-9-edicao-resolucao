@@ -1,5 +1,13 @@
 const fs = require('fs');
 
-INPUT = fs.readFileSync('./ceramica/input','utf-8');
+const INPUT = fs.readFileSync('./ceramica/input','utf-8');
 
-console.log(INPUT);
+const LINHAS = INPUT.split('\n');
+
+const [DIAMETRO , ALTURA] = LINHAS[0].split(' ');
+
+
+
+console.log(altura);
+
+
