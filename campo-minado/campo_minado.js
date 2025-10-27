@@ -19,23 +19,23 @@ for(let i = 0; i < altura; i++){
     }
 }
 
-//checa cada linha
+//verifica as 8 posicoes adjacentes
 for(let i = 0; i < altura; i++){
     for(let j = 0; j < largura; j++){
         if(tabuleiro[i][j] == '.'){
             let count = 0;
             
-            //checa linha acima
+            //verifica linha acima
             if(tabuleiro[i+1] && tabuleiro[i+1][j] == '*') count++;
             if(tabuleiro[i+1] && tabuleiro[i+1][j+1] == '*') count++;
             if(tabuleiro[i+1] && tabuleiro[i+1][j-1] == '*') count++;
 
-            //checa linha abaixo
+            //verifica linha abaixo
             if(tabuleiro[i-1] && tabuleiro[i-1][j] == '*') count++;
             if(tabuleiro[i-1] && tabuleiro[i-1][j-1] == '*') count++;
             if(tabuleiro[i-1] && tabuleiro[i-1][j+1] == '*') count++;
 
-            //checa linha atual
+            //verifica linha atual
             if(tabuleiro[i][j+1] == '*') count++;
             if(tabuleiro[i][j-1] == '*') count++;
 

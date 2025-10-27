@@ -2,7 +2,7 @@
 
 Aqui estão documentados os exercícios da Maratona de programação da Charcode 9° edição do IF Câmpus Charqueadas feitos por mim.
 
-## Ferramenta necessária para testar os exercicíos:
+## Ferramenta necessária para testar os exercicíos
 
 - Node.JS
 
