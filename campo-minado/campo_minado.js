@@ -1,51 +1,53 @@
-var input = require('fs').readFileSync('input', 'utf8');
+const fs = require('fs');
 
-var linhas = input.split('\n');
+const INPUT = fs.readFileSync('./campo-minado/input', 'utf8');
 
-var primeiraLinha = input.split('\n')[0].split(' ');
-var altura = primeiraLinha[0];
-var largura = primeiraLinha[1];
+const LINHAS = INPUT.split('\n');
 
-var mapa = linhas.slice(1);
+const PRIMEIRA_LINHA = LINHAS[0].split(' ');
 
-var tabuleiro = [];
+const MAPA = LINHAS.slice(1);
 
-for(let i =0 ;i<altura;i++){
+let [altura, largura] = PRIMEIRA_LINHA;
+let tabuleiro = [];
+
+//preenche o tabuleiro
+for(let i = 0; i < altura; i++){
     tabuleiro[i] = [];
     for(let j =0;j<largura;j++){
-        tabuleiro[i][j] = mapa[i][j];
+        tabuleiro[i][j] = MAPA[i][j];
     }
 }
 
-for(let i =0 ;i<altura;i++){
-    for(let j =0;j<largura;j++){
+//checa cada linha
+for(let i = 0; i < altura; i++){
+    for(let j = 0; j < largura; j++){
         if(tabuleiro[i][j] == '.'){
-            let count =0;
+            let count = 0;
             
+            //checa linha acima
             if(tabuleiro[i+1] && tabuleiro[i+1][j] == '*') count++;
             if(tabuleiro[i+1] && tabuleiro[i+1][j+1] == '*') count++;
             if(tabuleiro[i+1] && tabuleiro[i+1][j-1] == '*') count++;
 
-                    
+            //checa linha abaixo
             if(tabuleiro[i-1] && tabuleiro[i-1][j] == '*') count++;
             if(tabuleiro[i-1] && tabuleiro[i-1][j-1] == '*') count++;
             if(tabuleiro[i-1] && tabuleiro[i-1][j+1] == '*') count++;
 
-                    
+            //checa linha atual
             if(tabuleiro[i][j+1] == '*') count++;
             if(tabuleiro[i][j-1] == '*') count++;
 
+            //preenche posicao com o numero de bombas adjacentes
             tabuleiro[i][j] = count;
         }
     }
 }
 
-
-for(let i =0 ;i<altura;i++){
+//Imprime o tabuleiro
+for(let i = 0; i < altura; i++){
     console.log(`${tabuleiro[i].join('')}`);
-    for(let j =0;j<largura;j++){
-    }
-    
 }
 
 

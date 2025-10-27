@@ -1,4 +1,4 @@
-# [Campo Minado](https://autojudge.io/problems/a6562e)
+# [Gincana](https://autojudge.io/problems/dbec62)
 
 ## Como testar
 
@@ -7,7 +7,7 @@
 2. Utilize o comando:
 
 ``` bash
-node ./campo-minado/campo_minado.js
+node ./gincana/gincana.js
 ```
 
 ## Como mudar a entrada
@@ -15,4 +15,4 @@ node ./campo-minado/campo_minado.js
 modifique o arquivo [input](input), respeitando as regras de entrada.
 
 ---
-Enunciado: [https://autojudge.io/problems/a6562e](https://autojudge.io/problems/a6562e)
+Enunciado: [https://autojudge.io/problems/a6562e](https://autojudge.io/problems/dbec62)
