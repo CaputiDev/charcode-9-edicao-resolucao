@@ -1,3 +1,4 @@
+// https://autojudge.io/problems/aa7fde
 const fs = require('fs');
 
 const INPUT = fs.readFileSync('./ceramica/input','utf-8');

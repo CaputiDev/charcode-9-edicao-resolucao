@@ -1,3 +1,4 @@
+// https://autojudge.io/problems/dbec62
 const fs = require('fs');
 
 const INPUT = fs.readFileSync('./gincana/input','utf-8');

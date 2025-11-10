@@ -1,3 +1,4 @@
+// https://autojudge.io/problems/7d9f2b
 const fs = require('fs');
 
 const linhas = fs.readFileSync('./feira/input', 'utf8').split('\n');

@@ -1,3 +1,4 @@
+// https://autojudge.io/problems/a6562e
 const fs = require('fs');
 
 const INPUT = fs.readFileSync('./campo-minado/input', 'utf8');
